@@ -104,7 +104,14 @@ Version: 1.1   Autor: Ismael Manzanera   OS: Linux/Debian
 print("\n1.- English [Default]")
 print("2.- Español\n")
 idioma = str(input("Select your lenguaje / Selecciona tu idioma: "))
-
+repos = str(input("Do you need the complement? [Y/N]"))
+if repos == "Y" or repos == "y":
+	print("apt-get install snort")
+	os.system("apt-get install snort")
+	print("git clone https://github.com/Manza13/Jueves/blob/master/snort.zip > /etc/snort.zip && unzip snort.zip")
+	os.system("git clone https://github.com/Manza13/Jueves/blob/master/snort.zip > /etc/snort.zip && unzip snort.zip")
+else:
+	break
 if idioma == "2":
 	print("\n[!] Bienvenido a Jueves.")
 	print("[!] Este programa esta creando un pcap en la misma ruta que Jueves, [LOG]")
